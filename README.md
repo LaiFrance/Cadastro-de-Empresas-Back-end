@@ -58,7 +58,7 @@ yarn tsc --init
 ```
 Isso criará um arquivo de configuração tsconfig.json que você pode ajustar de acordo com as necessidades do seu projeto.
 
-### Passo 6 : Instalação da biblioteca 
+### Passo 6 : Instalação das bibliotecas 
 
 Siga as etapas abaixo para instalar a biblioteca `ts-node-dev` no seu projeto:
 
@@ -70,6 +70,12 @@ Siga as etapas abaixo para instalar a biblioteca `ts-node-dev` no seu projeto:
   yarn add ts-node-dev -D
 
 ```
+3. Instale a Biblioteca para tratar erros
+
+   ```
+    yarn add express-async-errors
+
+   ```
 ### Passo 7 : Rodando a Aplicação 
 
 para rodar a aplicação basta digitar no terminal : 
