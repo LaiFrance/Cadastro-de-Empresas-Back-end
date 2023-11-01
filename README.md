@@ -70,6 +70,12 @@ Siga as etapas abaixo para instalar a biblioteca `ts-node-dev` no seu projeto:
   yarn add ts-node-dev -D
 
 ```
+### Passo 7 : Rodando a Aplicação 
+
+para rodar a aplicação basta digitar no terminal : 
+```
+yarn dev
+```
 
 
 
