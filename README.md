@@ -56,6 +56,21 @@ Finalmente, inicialize o TypeScript com a seguinte configuração:
 yarn tsc --init
 
 ```
-
 Isso criará um arquivo de configuração tsconfig.json que você pode ajustar de acordo com as necessidades do seu projeto.
+
+### Passo 6 : Instalação da biblioteca 
+
+Siga as etapas abaixo para instalar a biblioteca `ts-node-dev` no seu projeto:
+
+1. Certifique-se de ter o Node.js instalado no seu sistema. Você pode fazer o download em [nodejs.org](https://nodejs.org/).
+
+2. No diretório do seu projeto, execute o seguinte comando para instalar o `ts-node-dev` globalmente (caso já não esteja instalado):
+
+```
+  yarn add ts-node-dev -D
+
+```
+
+
+
 
