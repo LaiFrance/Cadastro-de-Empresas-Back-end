@@ -76,6 +76,13 @@ Siga as etapas abaixo para instalar a biblioteca `ts-node-dev` no seu projeto:
     yarn add express-async-errors
 
    ```
+
+4. Habilite o Cors na Aplicação 
+
+```
+yarn add cors
+
+```
 ### Passo 7 : Rodando a Aplicação 
 
 para rodar a aplicação basta digitar no terminal : 
