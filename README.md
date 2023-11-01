@@ -1,4 +1,14 @@
 # Cadastro-de-Clientes-Back-end
+<div style="display: flex; align-items: center;">
+    <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL Logo" width="100" height="80">
+    <img src="https://github.com/LaiFrance/Cadastro-de-Clientes-Back-end/assets/91226847/8c23b201-61c5-420c-945a-0ab60dbf22ae" alt="Node.js Logo" width="150" height="80">
+    <img src="https://github.com/LaiFrance/Cadastro-de-Clientes-Back-end/assets/91226847/a31b3835-e5d5-4b44-99af-3213539569e0" alt="Captura de tela 2023-11-01 040736" width="150" height="80">
+    <img src="https://github.com/LaiFrance/Cadastro-de-Clientes-Back-end/assets/91226847/0914029f-4cd7-4710-bfb4-eb954da4c333" alt="Transferir" width="150" height="80">
+</div>
+
+
+
+
 
 ## Configuração do Backend do Projeto de Cadastro de Empresas
 
