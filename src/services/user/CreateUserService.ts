@@ -11,44 +11,48 @@ interface ICreateUserRequest {
 class CreateUserService {
   async execute({ nome, email, senha }: ICreateUserRequest) {
 
- if(!email || !senha || !nome){
+ if(!nome || !email || !senha){
         throw new Error("Missing information");
     }
 
+    else if(senha.length < 6){
+        throw new Error("Password must be at least 6 characters");
+    }
+
+    else if(!email.includes('@')){
+        throw new Error("Invalid email");
+    }
+
+    
+
+    // Verificar se o usuário existe
     const userAlreadyExists = await PrismaClient.usuario.findFirst({
         where: {
             email
         }
     });
 
-
     if(userAlreadyExists){
         throw new Error("User already exists");
     }
+    else{
+        console.log('Usuário criado com sucesso');
+    }
 
-    const senhaHash = await bcrypt.hash(senha, 8);
+    // Criptografar a senha
+    const passwordHash = await bcrypt.hash(senha, 8);
 
-
-
+    // Salvar o usuário no banco de dados
     const user = await PrismaClient.usuario.create({
         data: {
-            nome: nome,
-            email: email,
-            senha: senhaHash
-        },
-        select: {
-            id: true,
-            nome: true,
-            email: true,
-            
+            nome,
+            email,
+            senha: passwordHash
         }
     });
 
     return user;
-
-    }
-
 }
-
+}
 
 export { CreateUserService };
