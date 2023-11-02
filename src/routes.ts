@@ -70,3 +70,68 @@ router.post('/companies', async (request: Request, response: Response) => {
 }
 );
 
+// Rota para listar todas as empresas
+router.get('/companies', async (request: Request, response: Response) => {
+    const prisma = new PrismaClient();
+
+    const companies = await prisma.empresa.findMany();
+
+    return response.json(companies);
+});
+
+// Rota para listar uma empresa por nome ou cnpj
+
+router.get('/companies/search/:nome', async (request: Request, response: Response) => {
+    const prisma = new PrismaClient();
+    const { nome } = request.params;
+
+    const company = await prisma.empresa.findFirst({
+        where: {
+            nome_empresa: nome
+        }
+    });
+
+    return response.json(company);
+});
+
+// Rota para listar uma empresa por nome ou cnpj
+
+router.get('/companies/search/:cnpj', async (request: Request, response: Response) => {
+    const prisma = new PrismaClient();
+    const { cnpj } = request.params;
+
+    const company = await prisma.empresa.findFirst({
+        where: {
+            cnpj: cnpj
+        }
+    });
+
+    return response.json(company);
+});
+
+// Rota para atualizar uma empresa
+router.put('/companies/:id', async (request: Request, response: Response) => {
+    const prisma = new PrismaClient();
+    const { id } = request.params;
+    const { nome_empresa, cnpj, cep, endereco, numero, telefone, email } = request.body;
+
+    const company = await prisma.empresa.update({
+        where: {
+            id: Number(id)
+        },
+        data: {
+            nome_empresa,
+            cnpj,
+            cep,
+            endereco,
+            numero,
+            telefone,
+            email
+        }
+    });
+
+    return response.json(company);
+});
+
+
+
